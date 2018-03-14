@@ -1,0 +1,14 @@
+package main
+
+import (
+	"database/sql"
+
+	_ "github.com/go-sql-driver/mysql"
+)
+
+var db *sql.DB
+
+func main() {
+	router := initRouter()
+	router.Run(":8000")
+}
